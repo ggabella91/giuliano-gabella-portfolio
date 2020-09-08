@@ -5,7 +5,6 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/sections/hero"
-import Articles from "../components/sections/articles" 
 import About from "../components/sections/about"
 import Interests from "../components/sections/interests"
 import Projects from "../components/sections/projects"
@@ -14,10 +13,9 @@ import { splashScreen } from "../config"
 
 const IndexPage = ({ data }) => (
   <Layout splashScreen={splashScreen}>
-    <SEO title="Portfolio Minimal - A Gatsby Starter." />
+    <SEO title="Giuliano Gabella Developer Portfolio" />
     <Hero content={data.hero.edges} />
-    {/* Articles is populated via Medium RSS Feed fetch */}
-    <Articles />
+
     <About content={data.about.edges} />
     <Interests content={data.interests.edges} />
     <Projects content={data.projects.edges} />
@@ -41,14 +39,6 @@ export const pageQuery = graphql`
           greetings
           title
           subtitlePrefix
-          subtitle
-          icon {
-            childImageSharp {
-              fluid(maxWidth: 60, quality: 90) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
         }
       }
     }
