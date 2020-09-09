@@ -4,7 +4,7 @@ module.exports = {
     siteTitle: "Giuliano Gabella's Portfolio Website",
     siteShortTitle: "Giuliano Gabella", // Used as logo text in header, footer, and splash screen
     siteDescription: "A portfolio showcasing my projects and experience in web development.",
-    siteUrl: "https://github.com/ggabella91",
+    siteUrl: "https://www.giulianogabella.com/",
     siteLanguage: "en_US",
     siteIcon: "src/content/favicon.png", // Relative to gatsby-config file
 
