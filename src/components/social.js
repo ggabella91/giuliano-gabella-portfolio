@@ -74,6 +74,7 @@ const StyledSocialProfile = styled.a`
     ${({ theme }) => theme.colors.background} 50%
   );
   background-size: 205% 100%;
+  display: flex;
   background-position: right bottom;
   border-radius: ${({ theme }) => theme.borderRadius};
   border: 0.125rem solid ${({ theme }) => theme.colors.primary};
@@ -94,7 +95,7 @@ const StyledSocialProfile = styled.a`
     height: 1rem;
     width: 1rem;
     margin-right: 0.5rem;
-    margin-bottom: -0.05rem;
+    margin-bottom: -0.1rem;
   }
 `
 
