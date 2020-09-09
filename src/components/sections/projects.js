@@ -8,7 +8,6 @@ import { motion } from "framer-motion"
 
 import { useOnScreen } from "../../hooks"
 import ContentWrapper from "../../styles/ContentWrapper"
-import Underlining from "../../styles/Underlining"
 import Button from "../../styles/Button"
 import Icon from "../../components/icons"
 
@@ -125,7 +124,7 @@ const StyledProject = styled(motion.div)`
     padding-right: 0;
     /* Positioning of image and details should vary */
     flex-direction: ${({ position }) =>
-      position % 2 !== 0 ? "row" : "row-reverse"};
+    position % 2 !== 0 ? "row" : "row-reverse"};
   }
   .details {
     width: 100%;
@@ -150,9 +149,11 @@ const StyledProject = styled(motion.div)`
       font-weight: 700;
     }
     .tags {
-      display: flex;
-      flex-wrap: wrap;
-      margin-top: 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-row-gap: 0.5rem;
+      margin-top: 0.5rem;
+      margin-bottom: 2rem
       line-height: 1.2rem;
       span {
         margin-right: 1rem;
@@ -287,13 +288,13 @@ const Projects = ({ content }) => {
                     <MDXRenderer>{body}</MDXRenderer>
                     <div className="tags">
                       {frontmatter.tags.map(tag => (
-                        <Underlining
+                        <div
                           key={tag}
                           color="secondary"
                           hoverColor="secondary"
                         >
                           {tag}
-                        </Underlining>
+                        </div>
                       ))}
                     </div>
                     <div className="links">
@@ -336,19 +337,19 @@ const Projects = ({ content }) => {
       </StyledContentWrapper>
       {sectionDetails.frontmatter.buttonVisible === "true" && (
         <motion.a
-        ref={bRef}
-        variants={bVariants}
-        animate={bOnScreen ? "visible" : "hidden"}
-        className="cta-btn"
-        href={sectionDetails.frontmatter.buttonUrl}
-        target="_blank"
-        rel="nofollow noopener noreferrer"
-        aria-label="External Link"
-      >
-        <Button type="button" textAlign="center" color="primary" center>
-          {sectionDetails.frontmatter.buttonText}
-        </Button>
-      </motion.a>
+          ref={bRef}
+          variants={bVariants}
+          animate={bOnScreen ? "visible" : "hidden"}
+          className="cta-btn"
+          href={sectionDetails.frontmatter.buttonUrl}
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+          aria-label="External Link"
+        >
+          <Button type="button" textAlign="center" color="primary" center>
+            {sectionDetails.frontmatter.buttonText}
+          </Button>
+        </motion.a>
       )}
     </StyledSection>
   )

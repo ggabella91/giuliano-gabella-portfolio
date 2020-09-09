@@ -7,7 +7,6 @@ import { motion } from "framer-motion"
 
 import { useOnScreen } from "../../hooks"
 import ContentWrapper from "../../styles/ContentWrapper"
-import Underlining from "../../styles/Underlining"
 import Social from "../social"
 
 const StyledSection = styled(motion.section)`
@@ -67,7 +66,7 @@ const Contact = ({ content }) => {
   const onScreen = useOnScreen(ref)
   const variants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 } 
+    visible: { opacity: 1, y: 0 }
   }
 
   return (
@@ -81,9 +80,9 @@ const Contact = ({ content }) => {
             <strong>{frontmatter.name}</strong>
             <br />
             <a href={`mailto:${frontmatter.email}`}>
-              <Underlining color="secondary" hoverColor="secondary">
+              <div color="secondary" hoverColor="secondary">
                 {frontmatter.email}
-              </Underlining>
+              </div>
             </a>
           </div>
         </div>
