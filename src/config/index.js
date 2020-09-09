@@ -21,6 +21,14 @@ module.exports = {
         {
             name: "GitHub",
             url: "https://github.com/ggabella91"
+        },
+        {
+            name: "Twitter",
+            url: "https://twitter.com/ggabella91"
+        },
+        {
+            name: "Instagram",
+            url: "https://www.instagram.com/giuliano_gabella/"
         }
     ],
 

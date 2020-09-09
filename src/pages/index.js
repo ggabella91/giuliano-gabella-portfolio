@@ -69,7 +69,7 @@ export const pageQuery = graphql`
             name
             icon {
               childImageSharp {
-                fixed(width: 20, height: 20, quality: 90) {
+                fixed(width: 30, height: 30, quality: 90) {
                   ...GatsbyImageSharpFixed
                 }
               }
