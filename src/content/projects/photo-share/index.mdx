@@ -1,0 +1,25 @@
+---
+title: 'PhotoShare'
+screenshot: './PhotoShare_2.png'
+github: 'https://github.com/ggabella91/PhotoShare'
+external: 'http://www.photo-share.us/'
+tags:
+  - React
+  - Node
+  - Express
+  - Redux
+  - TypeScript
+  - Docker
+  - Kubernetes
+  - AWS
+  - MongoDB
+  - Mongoose
+visible: 'true'
+position: 1
+---
+
+A photo-sharing application modeled in the style of Instagram (web browser version).
+
+The backend implements a microservices-oriented architecture in Node.js, with NATS streaming server facilitating communication between different services. Each service is containerized with Docker, and container management and orchestration is handled by Kubernetes.
+
+The frontend is built using React and Redux. Everything is implemented in Typescript. AWS S3 is used to host all images. The service that fetches images from S3 also uses Redis to cache image files for faster loading upon refresh.
